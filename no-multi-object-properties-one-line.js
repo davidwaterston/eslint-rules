@@ -10,7 +10,6 @@ module.exports = function (context) {
         var numberOfLines;
         var numberOfProperties = node.properties.length;
         var objHasMultipleProperties = (numberOfProperties > 1);
-        var props;
 
         if (objHasMultipleProperties) {
             numberOfLines = ((node.properties[node.properties.length - 1].loc.start.line) - node.properties[0].loc.start.line) + 1;
