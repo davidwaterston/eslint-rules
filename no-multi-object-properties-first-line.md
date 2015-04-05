@@ -39,6 +39,7 @@ var a = {
 ## Related Rules
 - [no-multi-object-properties-last-line](https://github.com/davidwaterston/eslint-rules/blob/master/no-multi-object-properties-last-line.md)
 - [no-multi-object-properties-one-line](https://github.com/davidwaterston/eslint-rules/blob/master/no-multi-object-properties-one-line.md)
+- [no-object-prop-key-value-split](https://github.com/davidwaterston/eslint-rules/blob/master/no-object-prop-key-value-split.md)
 
 ## Resources
  - [Rule source](https://github.com/davidwaterston/eslint-rules/blob/master/no-multi-object-properties-first-line.js)
