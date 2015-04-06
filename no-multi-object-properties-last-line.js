@@ -14,7 +14,14 @@ module.exports = function (context) {
             propertyOnSameLineAsClosingBrace = (node.properties[node.properties.length - 1].loc.end.line === node.loc.end.line);
 
             if (propertyOnSameLineAsClosingBrace) {
-                context.report(node, "object property on same line as closing brace");
+                context.report(
+                    node,
+                    {
+                        line: node.properties[node.properties.length - 1].loc.end.line,
+                        column: node.properties[node.properties.length - 1].loc.end.column
+                    },
+                    "object property on same line as closing brace"
+                );
             }
         }
     }

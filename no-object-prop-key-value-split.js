@@ -10,11 +10,18 @@ module.exports = function (context) {
         var numberOfProperties = props.length;
         var i;
         var nameAndValueAreOnDifferentLines;
-        
+
         for (i = 0; i < numberOfProperties; i++) {
             nameAndValueAreOnDifferentLines = (props[i].key.loc.start.line !== props[i].value.loc.start.line);
             if (nameAndValueAreOnDifferentLines) {
-                context.report(node, "object property key '" + props[i].key.name + "' has its value on a different line");
+                context.report(
+                    node,
+                    {
+                        line: props[i].key.loc.start.line,
+                        column: props[i].key.loc.start.column
+                    },
+                    "object property key '" + props[i].key.name + "' has its value on a different line"
+                );
             }
         }
 
