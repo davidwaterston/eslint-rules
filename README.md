@@ -1,6 +1,10 @@
 # eslint-rules
 A small collection of custom [ESLint](http://eslint.org) rules.
 
+
+NOTE: This repo is still actively maintained but the object related rules have been extracted and bundled as an ESLint plugin - [eslint-plugin-objects](https://github.com/davidwaterston/eslint-plugin-objects) - with test data, etc. This is much easier to use and the recommended way to install those particular rules.  
+
+
 - [no-multi-vars](https://github.com/davidwaterston/eslint-rules/blob/master/no-multi-vars.md) - disallow multiple variables per var declaration.  
 It is undesirable to declare more than one variable for a single var statement. Placing each variable on a new line, with it's own var statement, makes debugging and refactoring simpler and less error-prone. This custom rule will enforce this practice.
 
